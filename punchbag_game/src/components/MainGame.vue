@@ -1,5 +1,10 @@
 <template>
-  <h2>Main Game</h2>
+  <div>
+    <h2>Main Game</h2>
+    <div> bag image</div>
+    <div>bag health</div>
+    <div>game controls</div>
+  </div>
 </template>
 
 <script lang="ts" setup>
