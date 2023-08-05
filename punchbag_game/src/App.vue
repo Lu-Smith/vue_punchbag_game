@@ -1,17 +1,25 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <div>
+    <MainHeader />
+    <h1>Punching Game</h1>
+    <MainGame />
+    <MainFooter />
+  </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
+import MainGame from './components/MainGame.vue';
+import MainFooter from './components/MainFooter.vue';
+import MainHeader from './components/MainHeader.vue';
 
 export default defineComponent({
   name: 'App',
   components: {
-    HelloWorld
-  }
+    MainGame,
+    MainFooter,
+    MainHeader
+}
 });
 </script>
 
