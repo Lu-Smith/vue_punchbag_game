@@ -8,5 +8,11 @@ describe('MainGame.vue', () => {
         const bagCointainer = wrapper.find('div#bag')
         expect(bagCointainer.exists()).toBe(true)
 
+        const healthCointainer = wrapper.find('div#bag-health')
+        expect(healthCointainer.exists()).toBe(true)
+
+        const controlsCointainer = wrapper.find('div#controls')
+        expect(controlsCointainer.exists()).toBe(true)
+
     })
 })
