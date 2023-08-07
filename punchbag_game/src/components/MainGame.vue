@@ -5,32 +5,47 @@
       <div></div>
     </div>
     <div id="controls">
-      <button>Punch</button>
-      <button>Restart</button>
+      <button v-on:click="punch">Punch</button>
+      <button v-on:click="restart">Restart</button>
     </div>
   </div>
 </template>
 
 <script lang="ts">
+import { defineComponent, ref } from 'vue';
 
-export default{
-  data() {
-    return {
-      health: 100
-    }
-  },
-  methods: {
-    punch: function() {
-      this.health -= 10
-    },
-    restart: function() {
-      this.health = 100
-    }
-  }
+interface MyComponent {
+  punch: () => void;
+  restart: () => void;
 }
 
+const useMyComponent = () => {
+  const health = ref(100);
 
+  const punch = () => {
+    health.value -= 10;
+  };
+
+  const restart = () => {
+    health.value = 100;
+  };
+
+  return { health, punch, restart };
+};
+
+export default defineComponent({
+  setup() {
+    const { health, punch, restart } = useMyComponent();
+
+    return { health, punch, restart };
+  },
+});
 </script>
+
+
+
+
+
 
 <style>
   #bag {
