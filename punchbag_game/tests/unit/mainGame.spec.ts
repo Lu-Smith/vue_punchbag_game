@@ -18,5 +18,9 @@ describe('MainGame.vue', () => {
         expect(punchButton.exists()).toBe(true)
         expect(punchButton.text()).toBe('Punch')
 
+        const restartButton = controlsCointainer.find('button')
+        expect(restartButton.exists()).toBe(true)
+        expect(restartButton.text()).toBe('Restart')
+
     })
 })
