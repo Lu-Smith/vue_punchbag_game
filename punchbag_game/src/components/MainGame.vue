@@ -22,6 +22,9 @@ export default{
   methods: {
     punch: function() {
       this.health -= 10
+    },
+    restart: function() {
+      this.health = 100
     }
   }
 }

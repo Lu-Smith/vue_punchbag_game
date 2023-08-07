@@ -22,6 +22,10 @@ describe('MainGame.vue', () => {
 
         expect(buttons[0].text()).toBe('Punch');
         expect(buttons[1].text()).toBe('Restart');
+    })
+    it('punch method decrese health by 10', () => {
+        const wrapper = shallowMount(MainGameVue)
 
+        expect(wrapper.vm.health).toBe(100)
     })
 })
