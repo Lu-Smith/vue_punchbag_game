@@ -14,5 +14,8 @@ describe('MainGame.vue', () => {
         const controlsCointainer = wrapper.find('div#controls')
         expect(controlsCointainer.exists()).toBe(true)
 
+        const punchButton = controlsCointainer.find('button')
+        expect(punchButton.exists()).toBe(true)
+
     })
 })
