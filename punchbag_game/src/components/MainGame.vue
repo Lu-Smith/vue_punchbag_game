@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div id="bag"> bag image</div>
+    <div id="bag"></div>
     <div id="bag-health">
       <div></div>
     </div>
@@ -59,6 +59,7 @@ export default{
     border-radius: 15px;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
     font-size: 18px;
+    margin-bottom: 20px;
   }
 
 
