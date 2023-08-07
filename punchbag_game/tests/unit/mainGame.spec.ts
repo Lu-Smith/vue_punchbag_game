@@ -14,13 +14,14 @@ describe('MainGame.vue', () => {
         const controlsCointainer = wrapper.find('div#controls')
         expect(controlsCointainer.exists()).toBe(true)
 
-        const punchButton = controlsCointainer.find('button')
-        expect(punchButton.exists()).toBe(true)
-        expect(punchButton.text()).toBe('Punch')
+        //buttons
 
-        const restartButton = controlsCointainer.find('button')
-        expect(restartButton.exists()).toBe(true)
-        expect(restartButton.text()).toBe('Restart')
+        expect(controlsCointainer.findAll('button').length).toBe(2);
+
+        const buttons = controlsCointainer.findAll('button');
+
+        expect(buttons[0].text()).toBe('Punch');
+        expect(buttons[1].text()).toBe('Restart');
 
     })
 })

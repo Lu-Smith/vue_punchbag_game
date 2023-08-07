@@ -1,12 +1,12 @@
 <template>
   <div>
-    <h2>Main Game</h2>
     <div id="bag"> bag image</div>
     <div id="bag-health">
       <div></div>
     </div>
     <div id="controls">
       <button>Punch</button>
+      <button>Restart</button>
     </div>
   </div>
 </template>
