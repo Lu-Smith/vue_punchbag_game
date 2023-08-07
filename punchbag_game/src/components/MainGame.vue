@@ -2,8 +2,10 @@
   <div>
     <div id="bag"></div>
     <div id="bag-health">
-      <div>{{ health }}</div>
+      <span>{{ health }}%</span>
+      <div></div>
     </div>
+
     <div id="controls">
       <button v-on:click="punch" v-show="!ended">Punch</button>
       <button v-on:click="restart" v-show="ended">Restart</button>
@@ -50,10 +52,6 @@ export default defineComponent({
 </script>
 
 
-
-
-
-
 <style>
   #bag {
     width: 200px;
@@ -65,13 +63,21 @@ export default defineComponent({
 
   #bag-health {
     width: 200px;
-    border: 2px solid #000;
     margin: 0 auto 20px auto;
+
+  }
+
+  #bag-health span {
+    color: red;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
   }
 
   #bag-health div {
     height: 20px;
     background: rgb(241, 10, 10);
+    border: 2px solid #000;
   }
 
   #controls {
