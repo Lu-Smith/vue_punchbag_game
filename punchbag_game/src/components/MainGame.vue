@@ -2,11 +2,11 @@
   <div>
     <div id="bag"></div>
     <div id="bag-health">
-      <div></div>
+      <div>{{ health }}</div>
     </div>
     <div id="controls">
-      <button v-on:click="punch">Punch</button>
-      <button v-on:click="restart">Restart</button>
+      <button v-on:click="punch" v-show="!ended">Punch</button>
+      <button v-on:click="restart" v-show="ended">Restart</button>
     </div>
   </div>
 </template>
@@ -17,6 +17,8 @@ import { defineComponent, ref } from 'vue';
 interface MyComponent {
   punch: () => void;
   restart: () => void;
+  health: number;
+  ended: boolean;
 }
 
 const useMyComponent = () => {
@@ -35,14 +37,14 @@ const useMyComponent = () => {
     ended.value = false;
   };
 
-  return { health, punch, restart };
+  return { health, ended, punch, restart };
 };
 
 export default defineComponent({
   setup() {
-    const { health, punch, restart } = useMyComponent();
+    const { health, ended, punch, restart} = useMyComponent();
 
-    return { health, punch, restart };
+    return { health, punch, restart, ended };
   },
 });
 </script>
