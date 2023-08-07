@@ -32,4 +32,15 @@ export default defineComponent({
   color: #2c3e50;
   margin-top: 60px;
 }
+
+h1 {
+  animation: colorAnimation 2s infinite;
+}
+
+@keyframes colorAnimation {
+    0% { color: purple }
+    50% { color: rgb(79, 18, 177)}
+    100% { color: rgb(212, 21, 212) }
+}
+
 </style>

@@ -21,7 +21,7 @@ describe('MainFooter', () => {
          const gitHubLink = textElement.find('a.gitHub-link')
          expect(gitHubLink.exists()).toBe(true)
          expect(gitHubLink.text()).toBe('GitHub')
-         expect(gitHubLink.attributes('href')).toBe('https://github.com/Lu-Smith/rock_paper_scisors_vue_typescript_tdd')
+         expect(gitHubLink.attributes('href')).toBe('https://github.com/Lu-Smith/vue_punchbag_game')
          expect(gitHubLink.attributes('target')).toBe('_blank')
     })
 })

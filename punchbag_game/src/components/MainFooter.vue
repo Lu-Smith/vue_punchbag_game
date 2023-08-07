@@ -3,7 +3,7 @@
     <h4>This game was coded by 
       <a class="profile-link" href="https://www.lunasmithart.com/" target="_blank">Luna Smith</a> 
       and is available as an open-source project on 
-      <a class="gitHub-link" href="https://github.com/Lu-Smith/rock_paper_scisors_vue_typescript_tdd" target="_blank">GitHub</a>.
+      <a class="gitHub-link" href="https://github.com/Lu-Smith/vue_punchbag_game" target="_blank">GitHub</a>.
     </h4>
   </div>
 
@@ -15,5 +15,19 @@
   bottom: 0;
   left: 0;
   right: 0;
+  font-size: 12px;
+  padding: 10px;
+}
+
+.Footer a {
+  color: rgb(119, 78, 78);
+  text-decoration: none;
+  transition: all 200ms ease-in-out;
+}
+
+.Footer a:hover {
+  color: rgb(99, 38, 114);
+  position: relative;
+  top: -3px;
 }
 </style>
