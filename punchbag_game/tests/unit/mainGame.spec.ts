@@ -27,5 +27,9 @@ describe('MainGame.vue', () => {
         const wrapper = shallowMount(MainGameVue)
 
         expect(wrapper.vm.health).toBe(100)
+
+        wrapper.vm.punch()
+
+        expect(wrapper.vm.health).toBe(90)
     })
 })
