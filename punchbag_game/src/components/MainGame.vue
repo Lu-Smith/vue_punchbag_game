@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>Main Game</h2>
-    <div> bag image</div>
+    <div id="bag"> bag image</div>
     <div>bag health</div>
     <div>game controls</div>
   </div>
