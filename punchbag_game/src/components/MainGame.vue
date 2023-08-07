@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div id="bag"></div>
+    <div id="bag" v-bind:class="{burst: ended}"></div>
     <span>{{ health }}%</span>
     <div id="bag-health">
         <div v-bind:style="{width:health + '%'}"></div> 
@@ -59,6 +59,12 @@ export default defineComponent({
     background: url(../images/punchbagMain.png) center no-repeat;
     background-size: 200%;
   }
+
+  #bag.burst {
+    background: url(../images/punchbag2.png) center no-repeat;
+    background-size: 120%;
+  }
+
   span {
     color: rgb(241, 10, 10);
     font-weight: 600;
