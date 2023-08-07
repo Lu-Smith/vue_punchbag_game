@@ -17,5 +17,9 @@ describe('App.vue', () => {
 
     const mainComponent = wrapper.findComponent(MainGame)
     expect(mainComponent.exists()).toBe(true)
+
+    const titleElement = wrapper.find('h1')
+    expect(titleElement.exists()).toBe(true)
+    expect(titleElement.text()).toBe('Punching Game')
   })
 })
