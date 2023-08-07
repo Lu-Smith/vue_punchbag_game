@@ -11,7 +11,21 @@
   </div>
 </template>
 
-<script lang="ts" setup>
+<script lang="ts">
+
+export default{
+  data() {
+    return {
+      health: 100
+    }
+  },
+  methods: {
+    punch: function() {
+      this.health -= 10
+    }
+  }
+}
+
 
 </script>
 
