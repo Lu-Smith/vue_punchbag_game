@@ -14,5 +14,11 @@
 </script>
 
 <style>
-
+  #bag {
+    width: 200px;
+    height: 500px;
+    margin: 0 auto;
+    background: url(../images/punchbagMain.png) center no-repeat;
+    background-size: 200%;
+  }
 </style>
