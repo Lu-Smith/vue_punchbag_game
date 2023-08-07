@@ -1,12 +1,12 @@
 import { shallowMount } from '@vue/test-utils'
-import HelloWorld from '@/components/HelloWorld.vue'
+import App from '../../src/App.vue'
+import MainFooter from '../../src/components/MainFooter.vue'
 
-describe('HelloWorld.vue', () => {
-  it('renders props.msg when passed', () => {
-    const msg = 'new message'
-    const wrapper = shallowMount(HelloWorld, {
-      props: { msg }
-    })
-    expect(wrapper.text()).toMatch(msg)
+
+describe('App.vue', () => {
+  it('renders all elements', () => {
+    const wrapper = shallowMount(App)
+    const footerComponent = wrapper.findComponent(MainFooter)
+    expect(footerComponent.exists()).toBe(true)
   })
 })
