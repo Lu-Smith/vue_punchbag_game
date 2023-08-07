@@ -32,4 +32,13 @@ describe('MainGame.vue', () => {
 
         expect(wrapper.vm.health).toBe(90)
     })
+    it('restart method resets health to 100', () => {
+        const wrapper = shallowMount(MainGameVue)
+
+        wrapper.setData({ health:50 })
+
+        wrapper.vm.restart()
+
+        expect(wrapper.vm.health).toBe(100)
+    })
 })
