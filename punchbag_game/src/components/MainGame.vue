@@ -3,7 +3,7 @@
     <div id="bag"></div>
     <div id="bag-health">
       <span>{{ health }}%</span>
-      <div></div>
+      <div v-bind:style="{width:health + '%'}"></div>
     </div>
 
     <div id="controls">
@@ -68,7 +68,7 @@ export default defineComponent({
   }
 
   #bag-health span {
-    color: red;
+    color: rgb(241, 10, 10);
     font-weight: 600;
     font-size: 18px;
     line-height: 25px;
