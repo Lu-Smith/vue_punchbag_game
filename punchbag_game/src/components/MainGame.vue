@@ -1,11 +1,10 @@
 <template>
   <div>
     <div id="bag"></div>
+    <span>{{ health }}%</span>
     <div id="bag-health">
-      <span>{{ health }}%</span>
-      <div v-bind:style="{width:health + '%'}"></div>
+        <div v-bind:style="{width:health + '%'}"></div> 
     </div>
-
     <div id="controls">
       <button v-on:click="punch" v-show="!ended">Punch</button>
       <button v-on:click="restart" v-show="ended">Restart</button>
@@ -60,24 +59,22 @@ export default defineComponent({
     background: url(../images/punchbagMain.png) center no-repeat;
     background-size: 200%;
   }
-
-  #bag-health {
-    width: 200px;
-    margin: 0 auto 20px auto;
-
-  }
-
-  #bag-health span {
+  span {
     color: rgb(241, 10, 10);
     font-weight: 600;
     font-size: 18px;
     line-height: 25px;
   }
 
+  #bag-health {
+    width: 200px;
+    margin: 0 auto 20px auto;
+    border: 2px solid #000;
+  }
+
   #bag-health div {
     height: 20px;
     background: rgb(241, 10, 10);
-    border: 2px solid #000;
   }
 
   #controls {
