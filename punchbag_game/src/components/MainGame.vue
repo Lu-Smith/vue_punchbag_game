@@ -35,5 +35,17 @@
     background: rgb(241, 10, 10);
   }
 
+  #controls {
+    width: 120px;
+    margin: 0 auto;
+  }
+
+  #controls button {
+    padding: 15px 20px;
+    border-radius: 15px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    font-size: 18px;
+  }
+
 
 </style>
