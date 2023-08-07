@@ -21,13 +21,18 @@ interface MyComponent {
 
 const useMyComponent = () => {
   const health = ref(100);
+  const ended = ref(false);
 
   const punch = () => {
     health.value -= 10;
+    if (health.value <= 0) {
+      ended.value = true
+    }
   };
 
   const restart = () => {
     health.value = 100;
+    ended.value = false;
   };
 
   return { health, punch, restart };
