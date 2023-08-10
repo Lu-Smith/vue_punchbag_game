@@ -6,7 +6,6 @@
       <a class="gitHub-link" href="https://github.com/Lu-Smith/vue_punchbag_game" target="_blank">GitHub</a>.
     </h4>
   </div>
-
 </template>
 
 <style>
