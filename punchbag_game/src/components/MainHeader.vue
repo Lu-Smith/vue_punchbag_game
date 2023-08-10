@@ -31,6 +31,12 @@
   justify-content: center;
   gap: 5px;
   font-weight: 600;
+  background: transparent;
+  border: none;
+}
+
+.Header .material-symbols-outlined {
+  font-size: 50px;
 }
 
 
