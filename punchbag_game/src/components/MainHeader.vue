@@ -1,5 +1,8 @@
 <template>
-  <h2>Header</h2>
+  <div>
+    <button>Dark</button>
+    <button>Light</button>
+  </div>
 </template>
 
 <script lang="ts" setup>
