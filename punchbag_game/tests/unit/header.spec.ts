@@ -9,5 +9,7 @@ describe('Header.vue', () => {
         expect(buttonsElements.length).toBe(2)
         expect(buttonsElements[0].exists()).toBeTruthy
         expect(buttonsElements[1].exists()).toBeTruthy
+        expect(buttonsElements[0].text()).toContain('Dark')
+        expect(buttonsElements[1].text()).toContain('Light')
     })
 })
