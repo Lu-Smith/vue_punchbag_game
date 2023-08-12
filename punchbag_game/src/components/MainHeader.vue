@@ -1,13 +1,13 @@
 <template>
   <div class="Header">
-    <button class="darkButton">
-      Dark 
-      <span class="material-symbols-outlined">toggle_off</span>
-    </button>
-    <button class="lightButton">
-      Light 
-      <span class="material-symbols-outlined">toggle_on</span>
-</button>
+      <button class="darkButton" >
+          Dark 
+          <span class="material-symbols-outlined offButton">toggle_off</span>
+      </button>
+      <button class="lightButton">
+          Light 
+          <span class="material-symbols-outlined onButton">toggle_on</span>
+      </button>
   </div>
 </template>
 
@@ -21,6 +21,14 @@
   gap: 10px;
   align-items: center;
   justify-content: center;
+}
+
+.Header .onButton {
+  color: green;
+}
+
+.Header .offButton {
+  color: rgb(248, 22, 6);
 }
 
 .Header button {
