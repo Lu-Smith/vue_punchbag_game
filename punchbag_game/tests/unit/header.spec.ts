@@ -11,5 +11,14 @@ describe('Header.vue', () => {
         expect(buttonsElements[1].exists()).toBeTruthy
         expect(buttonsElements[0].text()).toContain('Dark')
         expect(buttonsElements[1].text()).toContain('Light')
+
+        const toggleElementOff = buttonsElements[0].find('span')
+        expect(toggleElementOff.exists()).toBeTruthy
+        expect(toggleElementOff.text()).toContain('toggle_off')
+        expect(toggleElementOff.attributes('class')).toBe('material-symbols-outlined offButton')
+        const toggleElementOn = buttonsElements[1].find('span')
+        expect(toggleElementOn.exists()).toBeTruthy
+        expect(toggleElementOff.text()).toContain('toggle_off')
+        expect(toggleElementOn.attributes('class')).toBe('material-symbols-outlined onButton')
     })
 })
