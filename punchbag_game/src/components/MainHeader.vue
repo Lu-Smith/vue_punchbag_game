@@ -1,17 +1,26 @@
 <template>
   <div class="Header">
-      <button class="darkButton" >
+      <button class="darkButton" v-on:click="toggleModes">
           Dark 
-          <span class="material-symbols-outlined offButton">toggle_off</span>
+          <span class="material-symbols-outlined" :class={DarkOnButton}>toggle_off</span>
       </button>
-      <button class="lightButton">
+      <button class="lightButton" v-on:click="toggleModes">
           Light 
-          <span class="material-symbols-outlined onButton">toggle_on</span>
+          <span class="material-symbols-outlined" :class={LightOnButton}>toggle_on</span>
       </button>
   </div>
 </template>
 
 <script lang="ts" setup>
+import { ref } from 'vue'
+
+const LightOnButton = ref(true)
+const DarkOnButton = ref(false)
+
+const toggleModes = () => {
+  LightOnButton.value = !LightOnButton.value
+  DarkOnButton.value = !DarkOnButton.value
+}
 
 </script>
 
@@ -23,12 +32,8 @@
   justify-content: center;
 }
 
-.Header .onButton {
+.DarkOnButton, .LightOnButton {
   color: green;
-}
-
-.Header .offButton {
-  color: rgb(248, 22, 6);
 }
 
 .Header button {
