@@ -67,6 +67,5 @@ defineProps({
   .Header .material-symbols-outlined {
     font-size: 40px;
   }
-  }
-
+}
 </style>

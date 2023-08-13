@@ -32,4 +32,11 @@
   position: relative;
   top: -3px;
 }
+
+@media screen and (max-width: 800px) {
+  .Footer {
+    font-size: 10px;
+    padding: 15px;
+  }
+}
 </style>
