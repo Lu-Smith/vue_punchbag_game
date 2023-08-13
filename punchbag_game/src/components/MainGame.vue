@@ -63,9 +63,10 @@ export default defineComponent({
 
 <style >
   @keyframes moveAnimation {
-    0% { transform: translateX(0px); }
-    50% { transform: translateX(20px); }
-    100% { transform: translateX(0px); }
+    0% { transform: translateX(0px) translateY(0px); }
+    40% { transform: translateX(20px) translateY(-5px); }
+    70% { transform: translateY(5px); }
+    100% { transform: translateX(0px) translateY(0px);  }
   }
 
   @keyframes rotateAnimation {
