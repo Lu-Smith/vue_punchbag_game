@@ -1,26 +1,23 @@
 <template>
   <div>
-    <MainHeader />
+    <MainHeader @modeToggle="toggleDarkMode" :darkMode="darkMode" />
     <h1>Punching Game</h1>
     <MainGame />
     <MainFooter />
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
+<script lang="ts" setup>
+import { ref } from 'vue';
 import MainGame from './components/MainGame.vue';
 import MainFooter from './components/MainFooter.vue';
 import MainHeader from './components/MainHeader.vue';
 
-export default defineComponent({
-  name: 'App',
-  components: {
-    MainGame,
-    MainFooter,
-    MainHeader
-}
-});
+const darkMode = ref(false);
+
+const toggleDarkMode = () => {
+  darkMode.value = !darkMode.value;
+};
 </script>
 
 <style>
