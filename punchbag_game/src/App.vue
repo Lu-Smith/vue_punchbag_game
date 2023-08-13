@@ -7,7 +7,7 @@
   </div>
 </template>
 
-<script lang="ts" setup>
+<script lang="ts" setup >
 import { ref } from 'vue';
 import MainGame from './components/MainGame.vue';
 import MainFooter from './components/MainFooter.vue';
