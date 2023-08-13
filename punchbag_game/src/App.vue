@@ -40,7 +40,7 @@ h1 {
 }
 
 #app .dark {
-  background: rgb(37, 37, 37);
+  background: rgb(15, 15, 15);
   color: white;
 }
 
