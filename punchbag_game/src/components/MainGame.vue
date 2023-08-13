@@ -109,11 +109,11 @@ export default defineComponent({
   }
 
   #controls button {
-    padding: 15px 20px;
+    padding: 13px 20px;
     border-radius: 15px;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
-    font-size: 18px;
-    transition: all 200 ms ease-in-out;
+    font-size: 17px;
+    transition: all 200ms ease-in-out;
     cursor: pointer;
   }
 
@@ -158,4 +158,35 @@ export default defineComponent({
     top: 50px;
     left: 120px;
   }
+
+  @media screen and (max-width: 800px) {
+    #bag {
+      width: 220px;
+      min-height: 440px;
+      background-size: 190%;
+    }
+
+    span {
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 20px;
+    }
+
+    #bag-health {
+      width: 200px;
+      margin: 0 auto;
+      border: 1px solid #000;
+    }
+
+    #bag-health div {
+      height: 15px;
+    }
+
+    #controls button {
+      padding: 10px 25px;
+      border-radius: 10px;
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+      font-size: 15px;
+    }
+}
 </style>
