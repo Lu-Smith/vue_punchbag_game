@@ -46,8 +46,8 @@ h1 {
 
 @keyframes colorAnimation {
     0% { color: purple }
-    50% { color: rgb(79, 18, 177)}
-    100% { color: rgb(212, 21, 212) }
+    50% { color: rgb(12, 139, 50)}
+    100% { color: rgb(212, 21, 21) }
 }
 
 </style>

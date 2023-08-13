@@ -24,13 +24,13 @@
 }
 
 .Footer a {
-  color: rgb(119, 78, 78);
+  color: rgb(241, 88, 88);
   text-decoration: none;
   transition: all 200ms ease-in-out;
 }
 
 .Footer a:hover {
-  color: rgb(99, 38, 114);
+  color: rgb(24, 134, 52);
   position: relative;
   top: -3px;
 }
