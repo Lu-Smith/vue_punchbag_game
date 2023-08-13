@@ -1,6 +1,6 @@
 <template>
   <div class="MainGame">
-    <div id="bag" v-bind:class="{burst: ended}"></div>
+    <div id="bag" v-bind:class="{burst: ended, punch: activeBlood}"></div>
     <span>{{ health }}%</span>
     <div id="bag-health">
         <div v-bind:style="{width:health + '%'}"></div> 
@@ -68,6 +68,13 @@ export default defineComponent({
     100% { transform: translateX(0px); }
   }
 
+  @keyframes rotateAnimation {
+    0% { transform: rotate(0); }
+    20% { transform: rotate(-10deg); }
+    40% { transform: rotate(10deg); }
+    100% { transform: rotate(0); }
+  }
+
   .MainGame {
     min-height: 100vh;
   }
@@ -78,6 +85,11 @@ export default defineComponent({
     margin: 0 auto;
     background: url(../images/punchbagMain.png) center no-repeat;
     background-size: 200%;
+   
+  }
+
+  #bag.punch {
+    animation: rotateAnimation 5s infinite;
   }
 
   #bag.burst {
