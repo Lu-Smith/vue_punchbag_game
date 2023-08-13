@@ -62,6 +62,12 @@ export default defineComponent({
 
 
 <style >
+  @keyframes moveAnimation {
+    0% { transform: translateX(0px); }
+    50% { transform: translateX(20px); }
+    100% { transform: translateX(0px); }
+  }
+
   .MainGame {
     min-height: 100vh;
   }
@@ -122,6 +128,7 @@ export default defineComponent({
 
   .activeBlood {
     background: red;
+    animation: moveAnimation 2s infinite;
   }
 
   .red-square.box1 {
