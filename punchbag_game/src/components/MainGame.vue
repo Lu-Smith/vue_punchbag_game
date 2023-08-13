@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="MainGame">
     <div id="bag" v-bind:class="{burst: ended}"></div>
     <span>{{ health }}%</span>
     <div id="bag-health">
@@ -51,10 +51,13 @@ export default defineComponent({
 </script>
 
 
-<style>
+<style >
+.MainGame {
+  min-height: 100vh;
+}
   #bag {
     width: 200px;
-    height: 500px;
+    min-height: 500px;
     margin: 0 auto;
     background: url(../images/punchbagMain.png) center no-repeat;
     background-size: 200%;
@@ -93,7 +96,7 @@ export default defineComponent({
     border-radius: 15px;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
     font-size: 18px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
 
 

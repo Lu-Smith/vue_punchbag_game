@@ -1,10 +1,10 @@
 <template>
   <div class="Header">
-    <button class="darkButton" @click="$emit('modeToggle')">
+    <button class="darkButton" @click="$emit('modeToggle')" :class="{'darkMode': darkMode}">
       Dark 
       <span class="material-symbols-outlined" :class="{'darkMode': darkMode}" >toggle_off</span>
     </button>
-    <button class="lightButton" @click="$emit('modeToggle')" >
+    <button class="lightButton" @click="$emit('modeToggle')" :class="{'lightMode': darkMode}" >
       Light 
       <span class="material-symbols-outlined" :class="{'darkMode': !darkMode}">toggle_on</span>
     </button>
@@ -12,10 +12,13 @@
 </template>
 
 <script lang="ts" setup>
+ import { defineProps } from 'vue';
 
-const props = defineProps({
-  darkMode: Boolean,
+defineProps({
+  darkMode: {type: Boolean, required: true}
 });
+
+
 </script>
 
 <style>
@@ -28,6 +31,10 @@ const props = defineProps({
 
 .Header .darkMode {
   color: green;
+}
+
+.Header .lightMode {
+  color: rgb(241, 10, 10);
 }
 
 .Header button {

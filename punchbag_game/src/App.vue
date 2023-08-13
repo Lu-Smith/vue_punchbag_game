@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div :class="{'dark': darkMode}">
     <MainHeader @modeToggle="toggleDarkMode" :darkMode="darkMode" />
     <h1>Punching Game</h1>
     <MainGame />
-    <MainFooter />
+    <MainFooter/>
   </div>
 </template>
 
@@ -21,17 +21,27 @@ const toggleDarkMode = () => {
 </script>
 
 <style>
+* {
+  margin: 0;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  min-height: 100vh;
 }
 
 h1 {
   animation: colorAnimation 2s infinite;
+  margin-top: 10px;
+}
+
+#app .dark {
+  background: rgb(37, 37, 37);
+  color: white;
 }
 
 @keyframes colorAnimation {
