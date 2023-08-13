@@ -19,35 +19,17 @@ describe('Header.vue', () => {
         const toggleElementOn = buttonsElements[1].find('span')
         expect(toggleElementOn.exists()).toBeTruthy
         expect(toggleElementOff.text()).toContain('toggle_off')
-        expect(toggleElementOn.attributes('class')).toBe('material-symbols-outlined LightOnButton')
+        expect(toggleElementOn.attributes('class')).toBe('material-symbols-outlined darkMode')
     })
     it('toggles dark mode is on', async () => {
         const wrapper = shallowMount(MainHeaderVue)
 
-        await wrapper.find('button.lightButton').trigger('click');
-
-        expect((wrapper.vm as any).LightOnButton).toBe(false);
-
-        expect((wrapper.vm as any).DarkOnButton).toBe(true);
-
-        const toggleElementOn = wrapper.find('.lightButton span');
-        expect(toggleElementOn.attributes('class')).toBe('material-symbols-outlined');
-
-        const toggleElementOff = wrapper.find('.darkButton span');
-        expect(toggleElementOff.attributes('class')).toBe('material-symbols-outlined DarkOnButton');
-    })
-    it('toggles light mode is on', async () => {
-        const wrapper = shallowMount(MainHeaderVue)
-
         await wrapper.find('button.darkButton').trigger('click');
-        await wrapper.find('button.lightButton').trigger('click');
 
-        expect((wrapper.vm as any).LightOnButton).toBe(true);
-
-        expect((wrapper.vm as any).DarkOnButton).toBe(false);
+        expect((wrapper.vm as any).darkMode).toBe(false);
 
         const toggleElementOn = wrapper.find('.lightButton span');
-        expect(toggleElementOn.attributes('class')).toBe('material-symbols-outlined LightOnButton');
+        expect(toggleElementOn.attributes('class')).toBe('material-symbols-outlined darkMode');
 
         const toggleElementOff = wrapper.find('.darkButton span');
         expect(toggleElementOff.attributes('class')).toBe('material-symbols-outlined');
