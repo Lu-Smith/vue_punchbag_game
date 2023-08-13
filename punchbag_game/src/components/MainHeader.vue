@@ -53,5 +53,20 @@ defineProps({
   font-size: 50px;
 }
 
+@media screen and (max-width: 800px) {
+  .Header {
+    gap: 5px;
+  }
+
+  .Header button {
+    padding: 3px;
+    font-size: 12px;
+    gap: 3px;
+  }
+
+  .Header .material-symbols-outlined {
+    font-size: 40px;
+  }
+  }
 
 </style>

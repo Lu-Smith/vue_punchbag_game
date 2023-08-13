@@ -50,4 +50,11 @@ h1 {
     100% { color: rgb(212, 21, 21) }
 }
 
+@media screen and (max-width: 800px) {
+    h1 {
+font-size: 18px;
+    margin-top: 5px;
+  }
+}
+
 </style>
